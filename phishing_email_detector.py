@@ -24,7 +24,7 @@ low_risk_words = "password reset"
 #ask user for input
 
 subject_line = input("Enter the email subject line: ")
-print("\nSECURITY ASSESMENT:")
+print("\nSECURITY ASSESSMENT:")
 
 
 if "urgent" in subject_line.lower() or "immediate action required" in subject_line.lower():
@@ -36,7 +36,7 @@ elif "password reset" in subject_line.lower():
 else:
     print("No phishing indicators detected.")
 
-print(f"------------------------\nAnalyzed subject: {subject_line}")
+print(f"------------------------\nAnalyzed subject: \"{subject_line}"")
 
 
 
