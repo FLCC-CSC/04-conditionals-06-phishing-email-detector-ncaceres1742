@@ -16,27 +16,23 @@
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
-#Keywords that will alert
-high_alert_words = ("urgent", "immediate action required")
-medium_alert_words = ("win", "free")
-low_risk_words = "password reset"
-
 #ask user for input
 
 subject_line = input("Enter the email subject line: ")
+subject_lower = subject_line.lower()
+
 print("\nSECURITY ASSESSMENT:")
 
-
-if "urgent" in subject_line.lower() or "immediate action required" in subject_line.lower():
+if "urgent" in subject_lower or "immediate action required" in subject_lower:
     print("HIGH RISK: Possible phishing attempt.")
-elif "win" in subject_line.lower() or "free" in subject_line.lower():
+elif "win" in subject_lower or "free" in subject_lower:
     print("MEDIUM RISK: Suspicious offer detected.")
-elif "password reset" in subject_line.lower():
+elif "password reset" in subject_lower:
     print("LOW RISK: Verify legitimacy with sender.")
 else:
     print("No phishing indicators detected.")
 
-print(f"------------------------\nAnalyzed subject: \"{subject_line}"")
+print(f"------------------------\nAnalyzed subject: \"{subject_line}\"")
 
 
 
